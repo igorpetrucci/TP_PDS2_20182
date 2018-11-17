@@ -1,0 +1,55 @@
+# depslib dependency file v1.0
+1542251491 source:c:\users\captain9\documents\pds2\teste\data.cpp
+	<iostream>
+	<sstream>
+	"Data.h"
+
+1542251076 c:\users\captain9\documents\pds2\teste\data.h
+	<string>
+
+1542292428 source:c:\users\captain9\documents\pds2\teste\excecao.cpp
+	"Excecao.h"
+
+1542485237 c:\users\captain9\documents\pds2\teste\excecao.h
+	<iostream>
+	<string>
+
+1542255600 source:c:\users\captain9\documents\pds2\teste\hora.cpp
+	<iostream>
+	<sstream>
+	"Hora.h"
+
+1542251564 c:\users\captain9\documents\pds2\teste\hora.h
+	<string>
+
+1542301605 source:c:\users\captain9\documents\pds2\teste\main.cpp
+	<iostream>
+	"Interface.h"
+
+1542303069 c:\users\captain9\documents\pds2\teste\interface.h
+	"Openarquivo.h"
+
+1542298116 c:\users\captain9\documents\pds2\teste\openarquivo.h
+	<fstream>
+	<string>
+	"Sensor.h"
+	"Data.h"
+	"Hora.h"
+	"Excecao.h"
+
+1541618176 c:\users\captain9\documents\pds2\teste\sensor.h
+
+1542491933 source:c:\users\captain9\documents\pds2\teste\openarquivo.cpp
+	"Openarquivo.h"
+	<iostream>
+	<string>
+	<fstream>
+	<sstream>
+	<cstdlib>
+
+1541618238 source:c:\users\captain9\documents\pds2\teste\sensor.cpp
+	"Sensor.h"
+
+1542303390 source:c:\users\captain9\documents\pds2\teste\interface.cpp
+	"Interface.h"
+
