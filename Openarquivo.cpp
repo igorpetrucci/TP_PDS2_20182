@@ -21,19 +21,25 @@ Openarquivo::Openarquivo(){
 }
 
 void Openarquivo::Abrearquivo(){
-    cout << "---------------------------------------------" << endl;
-	cout << "Digite o nome do arquivo a ser aberto: \n" << "-> ";
-    cin >> nomearquivo_;
+    bool repeticao_ = true;
+    do{
+        try{
+            cout << "---------------------------------------------" << endl;
+            cout << "Digite o nome do arquivo a ser aberto: \n" << "-> ";
+            cin >> nomearquivo_;
 
-	leitura.open(nomearquivo_.c_str());
-	if (leitura.fail()){
-		cout << "\n     A abertura do arquivo " << "\""<< nomearquivo_
-		<< "\" " << "falhou!" << endl;
-		cout << "-----------Encerrando o Programa-------------" << endl;
-		exit(1);
-	}
-	cout << "\nAbertura do arquivo " << nomearquivo_ << " realizada com sucesso!" << endl;
-    cout << "---------------------------------------------" << endl;
+            leitura.open(nomearquivo_.c_str());
+            if (leitura.fail()){
+                throw Excecao("Erro de leitura de arquivo! \n");
+            }else{
+                repeticao_ = true;
+            }
+        }catch(Excecao &e){
+            e.Out();
+            cout << "\nAbertura do arquivo " << nomearquivo_ << " Falhou!" << endl;
+            repeticao_ = false;
+        }
+    }while(repeticao_ == false);
 }
 
 void Openarquivo::Fechaaquivo(){
@@ -179,52 +185,52 @@ void Openarquivo::Analisavalores(){
     //Grava os valores analisados no arquivo base
     Gravalogs();
     if(dados_.Gettemperatura() > restricoes_.Gettempsuperior()){
-        Excecao e("-------ALERTA DE TEMPERATURA MAX-------^^^^^^\n");
+        Excecao e("^^^^^^-------ALERTA DE TEMPERATURA MAX-------\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
     if(dados_.Gettemperatura() < restricoes_.Gettempinferior()){
-        Excecao e("-------ALERTA DE TEMPERATURA MIN-------^^^^^^\n");
+        Excecao e("^^^^^^-------ALERTA DE TEMPERATURA MIN-------\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
     if(dados_.Getnivel() > restricoes_.Getnivelsuperior()){
-        Excecao e("-------ALERTA DE NIVEL MAX-------^^^^^^\n");
+        Excecao e("-ALERTA DE NIVEL MAX-^^^^^^\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
     if(dados_.Getnivel() < restricoes_.Getnivelinferior()){
-        Excecao e("-------ALERTA DE NIVEL MIN-------^^^^^^\n");
+        Excecao e("-ALERTA DE NIVEL MIN-^^^^^^\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
     if(dados_.Getvazao() > restricoes_.Getvazaosuperior()){
-        Excecao e("-------ALERTA DE VAZAO MAX-------^^^^^^\n");
+        Excecao e("-ALERTA DE VAZAO MAX-------^^^^^^\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
     if(dados_.Getvazao() < restricoes_.Getvazaoinferior()){
-        Excecao e("-------ALERTA DE VAZAO MIN-------^^^^^^\n");
+        Excecao e("-ALERTA DE VAZAO MIN-------^^^^^^\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
     if(dados_.Getpressao() > restricoes_.Getpressaosuperior()){
-        Excecao e("-------ALERTA DE PRESSAO MAX-------^^^^^^\n");
+        Excecao e("-------ALERTA DE PRESSAO MAX------------^^^^^^\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
     if(dados_.Getpressao() < restricoes_.Getpressaoinferior()){
-        Excecao e("-------ALERTA DE PRESSAO MIN-------^^^^^^\n");
+        Excecao e("-------ALERTA DE PRESSAO MIN------------^^^^^^\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
     if(dados_.Getconcentracao() > restricoes_.Getconcentracaosuperior()){
-        Excecao e("-------ALERTA DE CONCENTRACAO MAX-------^^^^^^\n");
+        Excecao e("-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
     if(dados_.Getconcentracao() < restricoes_.Getconcentracaoinferior()){
-        Excecao e("-------ALERTA DE CONCENTRACAO MIN-------^^^^^^\n");
+        Excecao e("-------ALERTA DE CONCENTRACAO MIN----------------------^^^^^^\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
