@@ -176,43 +176,55 @@ void Openarquivo::Analisavalores(){
     //Exibe na tela os valores lidos do arquivo de entrada
     Mostravalorestela();
 
-cout << "\nTESTE DE TEMP:" << dados_.Gettemperatura() << "  "  << restricoes_.Gettempinferior() << endl;
-
     //Grava os valores analisados no arquivo base
     Gravalogs();
-    try{
-        if(dados_.Gettemperatura() > restricoes_.Gettempsuperior()){
-            throw Excecao("-------ALERTA DE TEMPERATURA MAX-------\n");
-        }
-        if(dados_.Gettemperatura() < restricoes_.Gettempinferior()){
-            throw Excecao("-------ALERTA DE TEMPERATURA MIN-------\n");
-        }
-        if(dados_.Getnivel() > restricoes_.Getnivelsuperior()){
-            throw Excecao("-------ALERTA DE NIVEL MAX-------\n");
-        }
-        if(dados_.Getnivel() < restricoes_.Getnivelinferior()){
-            throw Excecao("-------ALERTA DE NIVEL MIN-------\n");
-        }
-        if(dados_.Getvazao() > restricoes_.Getvazaosuperior()){
-            throw Excecao("-------ALERTA DE VAZAO MAX-------\n");
-        }
-        if(dados_.Getvazao() < restricoes_.Getvazaoinferior()){
-            throw Excecao("-------ALERTA DE VAZAO MIN-------\n");
-        }
-        if(dados_.Getpressao() > restricoes_.Getpressaosuperior()){
-            throw Excecao("-------ALERTA DE PRESSAO MAX-------\n");
-        }
-        if(dados_.Getpressao() < restricoes_.Getpressaoinferior()){
-            throw Excecao("-------ALERTA DE PRESSAO MIN-------\n");
-        }
-        if(dados_.Getconcentracao() > restricoes_.Getconcentracaosuperior()){
-            throw Excecao("-------ALERTA DE CONCENTRACAO MAX-------\n");
-        }
-        if(dados_.Getconcentracao() < restricoes_.Getconcentracaoinferior()){
-            throw Excecao("-------ALERTA DE CONCENTRACAO MIN-------\n");
-        }
-
-    }catch(Excecao &e){
+    if(dados_.Gettemperatura() > restricoes_.Gettempsuperior()){
+        Excecao e("-------ALERTA DE TEMPERATURA MAX-------^^^^^^\n");
+        Gravalogs(e.Geterro());
+        e.Out();
+    }
+    if(dados_.Gettemperatura() < restricoes_.Gettempinferior()){
+        Excecao e("-------ALERTA DE TEMPERATURA MIN-------^^^^^^\n");
+        Gravalogs(e.Geterro());
+        e.Out();
+    }
+    if(dados_.Getnivel() > restricoes_.Getnivelsuperior()){
+        Excecao e("-------ALERTA DE NIVEL MAX-------^^^^^^\n");
+        Gravalogs(e.Geterro());
+        e.Out();
+    }
+    if(dados_.Getnivel() < restricoes_.Getnivelinferior()){
+        Excecao e("-------ALERTA DE NIVEL MIN-------^^^^^^\n");
+        Gravalogs(e.Geterro());
+        e.Out();
+    }
+    if(dados_.Getvazao() > restricoes_.Getvazaosuperior()){
+        Excecao e("-------ALERTA DE VAZAO MAX-------^^^^^^\n");
+        Gravalogs(e.Geterro());
+        e.Out();
+    }
+    if(dados_.Getvazao() < restricoes_.Getvazaoinferior()){
+        Excecao e("-------ALERTA DE VAZAO MIN-------^^^^^^\n");
+        Gravalogs(e.Geterro());
+        e.Out();
+    }
+    if(dados_.Getpressao() > restricoes_.Getpressaosuperior()){
+        Excecao e("-------ALERTA DE PRESSAO MAX-------^^^^^^\n");
+        Gravalogs(e.Geterro());
+        e.Out();
+    }
+    if(dados_.Getpressao() < restricoes_.Getpressaoinferior()){
+        Excecao e("-------ALERTA DE PRESSAO MIN-------^^^^^^\n");
+        Gravalogs(e.Geterro());
+        e.Out();
+    }
+    if(dados_.Getconcentracao() > restricoes_.Getconcentracaosuperior()){
+        Excecao e("-------ALERTA DE CONCENTRACAO MAX-------^^^^^^\n");
+        Gravalogs(e.Geterro());
+        e.Out();
+    }
+    if(dados_.Getconcentracao() < restricoes_.Getconcentracaoinferior()){
+        Excecao e("-------ALERTA DE CONCENTRACAO MIN-------^^^^^^\n");
         Gravalogs(e.Geterro());
         e.Out();
     }
