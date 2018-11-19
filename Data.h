@@ -6,26 +6,20 @@
 using std::string;
 
 class Data{
-private:
-    int dia;
-    int mes;
-    int ano;
-
 public:
     Data();
     //Sobrecarga de Operador
-    bool operator> (const Data &other1); //Verifico se a minha data é maior que
-    bool operator< (const Data &other1); //Verifico se a minha data é menor que
-    bool operator==(const Data &other1); //Verifico se a minha data é igual
-    int operator-(Data &other1);         //Realizo a diferenca entres as datas
-    Data & operator=(const Data &l);     //Construtor de cópia
+    bool operator> (const Data &other1);
+    bool operator< (const Data &other1);
+    bool operator==(const Data &other1);
+    int operator-(Data &other1);
+    Data & operator=(const Data &l);
 
     //Métodos adjacentes para sobrecarga de operador
-    int total_de_dias()const; //Utilizo essa função para encontrar a quantidade de dias entre as duas datas
+    int total_de_dias()const;
     void dat_agora();
     string Datastring();
 
-    //Métodos Get e set para hora
     void SetDia(int d);
     void SetMes(int m);
     void SetAno(int a);
@@ -35,6 +29,10 @@ public:
 
     ~Data();
 
+private:
+    int dia;
+    int mes;
+    int ano;
 };
 
 #endif // DATA_H

@@ -18,6 +18,7 @@ Data::~Data(){
 
 //Sobrecarga do Operador
 
+//Verifico se a minha data é maior que
 bool Data::operator> (const Data &other1){ //Verifica se a Data Esquerda A>B é maior que a Data da direita
     if (total_de_dias() > other1.total_de_dias()){
         return true;
@@ -25,7 +26,7 @@ bool Data::operator> (const Data &other1){ //Verifica se a Data Esquerda A>B é m
         return false;
     }
 }
-
+//Verifico se a minha data é menor que
 bool Data::operator< (const Data &other1){ //Verifica se a Data Esquerda A<B é menor que a Data da direita
     if (total_de_dias() < other1.total_de_dias()){
         return true;
@@ -34,10 +35,12 @@ bool Data::operator< (const Data &other1){ //Verifica se a Data Esquerda A<B é m
     }
 }
 
+//Verifico se a minha data é igual
 bool Data::operator==(const Data &other1){
     return (dia == other1.GetDia()) && (mes == other1.GetMes()) && (ano == other1.GetAno());
 }
 
+//Verifica quantas dias de diferença tem entre as datas
 int Data::operator- (Data &other1){
     int Quantidade_de_dias = 0;
 
@@ -50,6 +53,8 @@ int Data::operator- (Data &other1){
     return Quantidade_de_dias;
 }
 
+
+//Construtor de cópia de data
 Data & Data::operator= (const Data &l){
     SetDia(l.GetDia());
     SetMes(l.GetMes());
@@ -59,6 +64,7 @@ Data & Data::operator= (const Data &l){
 
 
 //Métodos complementares para a sobrecarga de operador
+//Utilizo essa função para encontrar a quantidade de dias entre as duas datas
 int Data::total_de_dias()const{
 int total_dias = 0;
     const int dias_mes[ ] = {31, 28, 31, 30, 31, 30 , 31, 31 , 30, 31, 30, 31};
@@ -69,15 +75,13 @@ int total_dias = 0;
     }
 
     for (int i = ano - 1; i > 1582; i--){
-        if(ano % 100 == 0)
-        {
+        if(ano % 100 == 0){
             if(ano % 400 == 0)
                 total_dias += 366;
             else
                 total_dias += 365;
         }
-        else
-        {
+        else{
             if(ano % 4 == 0)
                 total_dias += 366;
             else

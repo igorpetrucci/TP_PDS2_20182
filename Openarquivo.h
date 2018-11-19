@@ -22,18 +22,19 @@ class Openarquivo{
         void Separadata(string data_);
         void Separahorario(string data_);
         void Separavalores(string data_);
-        void AnalisaValores();
+        void Analisavalores();
         void Gravalogs();
         void Gravalogs(string a_);
         void Gravarestricoes(Excecao &restricoes_);
         void Mostravalorestela();
+        void Definerestricoes();
         ~Openarquivo();
 
     private:
         Sensor dados_;
         Data atual_;
         Hora horario_;
-        bool rest_;
+        Excecao restricoes_;
         int linhas_;
         string nomearquivo_;
         ifstream leitura;

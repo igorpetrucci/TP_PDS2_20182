@@ -4,6 +4,7 @@ Interface::Interface(){
     Imprimeinterface();
     abre_.Abrearquivo();
     abre_.Contagemlinhas();
+    abre_.Definerestricoes();
     abre_.Tratamento();
     abre_.Fechaaquivo();
 

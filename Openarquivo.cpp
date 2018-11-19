@@ -18,7 +18,6 @@ using std::ifstream;
 
 Openarquivo::Openarquivo(){
     linhas_ = 0;
-    rest_ = false; //Enquanto as restrição é false signfica que as restições não foram gravadas
 }
 
 void Openarquivo::Abrearquivo(){
@@ -54,13 +53,14 @@ void Openarquivo::Contagemlinhas(){
         getline(contagem, logs_);
         linhas_++;
     }
+    //cout << "Quantidade de linhas eh: " <<  linhas_ << "\n\n" << endl;
     contagem.close();
 }
 
 void Openarquivo::Mostraarquivo(){
     //Função para visualização da tela para usuário
     string parte1_, parte2_, parte3_;
-    cout << linhas_ << endl;
+    //cout << "Quantidade de linhas eh: " <<  linhas_ << endl;
     for(int i=0; i < linhas_ ; i++){
         leitura >> parte1_;
         leitura >> parte2_;
@@ -69,26 +69,27 @@ void Openarquivo::Mostraarquivo(){
     }
 }
 
+//Realiza a separação dos dados de cada linha e tratamento para alocação
+//de memória para cada item, bem como a analise de requisito se o sensor
+//irá identificar alguma alteração de temperatura
 void Openarquivo::Tratamento(){
-    string date_, hour_, value_;
-    //cout << linhas_ << endl;
 
-    for(int i=0; i < linhas_ ; i++){ ///MUDAR AQUI A RESTRIÇÃO DE LINHAS (1 -> só pega uma linha)
+    string date_, hour_, value_;
+    for(int i=0; i < linhas_ ; i++){
         leitura >> date_;
         leitura >> hour_;
         leitura >> value_;
-
 
         ///Tratamento das informações
         Separadata(date_);
         Separahorario(hour_);
         Separavalores(value_);
-        AnalisaValores(); ///Verifica se os valores correspondem entre os limites superiores e inferiores
+        Analisavalores(); ///Verifica se os valores correspondem entre os limites superiores e inferiores
     }
 }
 
 void Openarquivo::Separadata(string data_){
-    //cout << data_ << endl;
+   // cout << "\nImprimindo data: " << data_ << "\n" << endl;
     istringstream date(data_);
 	///Separando em parcelas menores a string da data
 	string ano_, mes_, dia_;
@@ -105,6 +106,7 @@ void Openarquivo::Separadata(string data_){
 	istringstream dia(dia_);
 	dia >> day_;
 
+
 	///Definir na classe data os valores referentes ao ano, mes e dia
     atual_.SetAno(year_);
     atual_.SetMes(month_);
@@ -112,7 +114,7 @@ void Openarquivo::Separadata(string data_){
 }
 
 void Openarquivo::Separahorario(string data_){
-    //cout << data_ << endl;
+//    cout << "\n\nImprimido horario: " << data_ << endl;
 
     istringstream tempo(data_);
 
@@ -137,7 +139,7 @@ void Openarquivo::Separahorario(string data_){
 
 
 void Openarquivo::Separavalores(string data_){
-    //cout << data_ << endl;
+//    cout << "\nImprimindo valores: " << data_ << endl;
     istringstream sensor(data_);
 
 	string nivel_, vazao_, temperatura_, pressao_, concentracao_;
@@ -169,79 +171,51 @@ void Openarquivo::Separavalores(string data_){
 
 }
 
-void Openarquivo::AnalisaValores(){
-
-    //Definição das restrições das variaveis Temperatura, Pressao e concentraçao
-    Excecao restricoes_;
-    //Incia a gravação das restriçõe, se já foi iniciado set os valores com o usuario e passa a analisar
-    //Os numeros fornecidos pelo arquivo principal
-    if(rest_ == false){
-        restricoes_.Inicia();
-        Gravarestricoes(restricoes_);
-        rest_= true;
-
-        string cabecalho_ = "---------------------------------------\n---------------LOGs--------------------\n";
-
-        Gravalogs(cabecalho_);
-    }
-    string cabecalho_= "----------------------------------------\n";
-    Gravalogs(cabecalho_);
+void Openarquivo::Analisavalores(){
 
     //Exibe na tela os valores lidos do arquivo de entrada
     Mostravalorestela();
 
+cout << "\nTESTE DE TEMP:" << dados_.Gettemperatura() << "  "  << restricoes_.Gettempinferior() << endl;
+
     //Grava os valores analisados no arquivo base
     Gravalogs();
+    try{
         if(dados_.Gettemperatura() > restricoes_.Gettempsuperior()){
-            Excecao e("-------ALERTA DE TEMPERATURA MAX--------^^^^^^\n");
-            Gravalogs(e.Geterro());
-            e.Out();
+            throw Excecao("-------ALERTA DE TEMPERATURA MAX-------\n");
         }
         if(dados_.Gettemperatura() < restricoes_.Gettempinferior()){
-            Excecao e("-------ALERTA DE TEMPERATURA MIN--------^^^^^^\n");
-            Gravalogs(e.Geterro());
-            e.Out();
+            throw Excecao("-------ALERTA DE TEMPERATURA MIN-------\n");
         }
         if(dados_.Getnivel() > restricoes_.Getnivelsuperior()){
-            Excecao e("-------ALERTA DE NIVEL MAX--------------^^^^^^\n");
-            Gravalogs(e.Geterro());
-            e.Out();
+            throw Excecao("-------ALERTA DE NIVEL MAX-------\n");
         }
         if(dados_.Getnivel() < restricoes_.Getnivelinferior()){
-            Excecao e("-------ALERTA DE NIVEL MIN--------------^^^^^^\n");
-            Gravalogs(e.Geterro());
-            e.Out();
+            throw Excecao("-------ALERTA DE NIVEL MIN-------\n");
         }
         if(dados_.Getvazao() > restricoes_.Getvazaosuperior()){
-            Excecao e("-------ALERTA DE VAZAO MAX--------------^^^^^^\n");
-            Gravalogs(e.Geterro());
-            e.Out();
+            throw Excecao("-------ALERTA DE VAZAO MAX-------\n");
         }
         if(dados_.Getvazao() < restricoes_.Getvazaoinferior()){
-            Excecao e("-------ALERTA DE VAZAO MIN--------------^^^^^^\n");
-            Gravalogs(e.Geterro());
-            e.Out();
+            throw Excecao("-------ALERTA DE VAZAO MIN-------\n");
         }
         if(dados_.Getpressao() > restricoes_.Getpressaosuperior()){
-            Excecao e("-------ALERTA DE PRESSAO MAX------------^^^^^^\n");
-            Gravalogs(e.Geterro());
-            e.Out();
+            throw Excecao("-------ALERTA DE PRESSAO MAX-------\n");
         }
         if(dados_.Getpressao() < restricoes_.Getpressaoinferior()){
-            Excecao e("-------ALERTA DE PRESSAO MIN------------^^^^^^\n");
-            Gravalogs(e.Geterro());
-            e.Out();
+            throw Excecao("-------ALERTA DE PRESSAO MIN-------\n");
         }
         if(dados_.Getconcentracao() > restricoes_.Getconcentracaosuperior()){
-            Excecao e("-------ALERTA DE CONCENTRACAO MAX-------^^^^^^\n");
-            Gravalogs(e.Geterro());
-            e.Out();
+            throw Excecao("-------ALERTA DE CONCENTRACAO MAX-------\n");
         }
         if(dados_.Getconcentracao() < restricoes_.Getconcentracaoinferior()){
-            Excecao e("-------ALERTA DE CONCENTRACAO MIN-------^^^^^^\n");
-            Gravalogs(e.Geterro());
-            e.Out();
+            throw Excecao("-------ALERTA DE CONCENTRACAO MIN-------\n");
         }
+
+    }catch(Excecao &e){
+        Gravalogs(e.Geterro());
+        e.Out();
+    }
 }
 
 ///Grava os logs lidos do sistema para o arquivo de saída
@@ -322,6 +296,20 @@ void Openarquivo::Mostravalorestela(){
     cout << atual_.Datastring() << horario_.Horastring() << endl;
     cout << "Temperatura:" << dados_.Gettemperatura() << " Nivel:" << dados_.Getnivel() << " Vazao:" << dados_.Getvazao() << " Pressao:" << dados_.Getpressao() << " Concentracao:" << dados_.Getconcentracao() << endl;
     cout << endl;
+}
+
+void Openarquivo::Definerestricoes(){
+
+    //Realiza a gravação de das restrições nos atributos
+    restricoes_.Inicia();
+    Gravarestricoes(restricoes_);
+
+    string cabecalho_ = "---------------------------------------\n---------------LOGs--------------------\n";
+
+    Gravalogs(cabecalho_);
+
+    cabecalho_= "----------------------------------------\n";
+    Gravalogs(cabecalho_);
 }
 
 

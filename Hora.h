@@ -12,10 +12,7 @@ private:
     int segundo;
 public:
     Hora();
-    //Métodos para Pegar os valores do TEMPO
     void Imprime_Tempo();
-
-    //Métodos Set e Get
     int GetHora()const;
     int GetMinuto()const;
     int GetSegundo()const;
