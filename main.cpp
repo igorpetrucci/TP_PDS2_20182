@@ -4,6 +4,7 @@
 int main(){
     Interface t;
 
+
 ///Teste da CLASSE DATA
 //    Data A;
 //    A.SetDia(26);
@@ -13,7 +14,7 @@ int main(){
 //    Data B;
 //    B.SetDia(27);
 //    B.SetMes(5);
-//    B.SetAno(2018);
+//    B.SetAno(2016);
 //    cout << "A: Dias: " << A.GetDia() << " Mes: " << A.GetMes() << " Ano: " << A.GetAno() << endl;
 //    cout << "Total de dias eh: " << A.total_de_dias() << "\n\n" << endl;
 //    cout << "B: Dias: " << A.GetDia() << " Mes: " << A.GetMes() << " Ano: " << B.GetAno() << endl;
@@ -37,13 +38,15 @@ int main(){
 //    ee = A>B;
 //    cout << "A eh maior que B? -> " << ee << endl;
 //
-//    //Teste de subtração de datas para descobrir quantos dias há entre as duas datas passdas
+    //Teste de subtração de datas para descobrir quantos dias há entre as duas datas passdas
 //    int qnts_dias = 0;
 //    qnts_dias = A-B;
+//    A.dat_agora();
+//    B.dat_agora();
 //    cout << "Quantos Dias tem entre as datas: " << qnts_dias << endl;
 //
 //    cout << endl;
-//
+
 //    //Teste de impressão de data
 //    A.dat_agora();
 //    cout << endl;
