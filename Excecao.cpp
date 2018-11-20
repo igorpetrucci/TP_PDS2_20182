@@ -5,15 +5,15 @@ Excecao::Excecao(){
 }
 
 void Excecao::Inicia(){
-tempsuperior_= 0.;
-    tempinferior_ = 0.;
-    nivelsuperior_ = 0.;
-    nivelinferior_ = 0.;
-    vazaosuperior_ = 0.;
-    vazaoinferior_ = 0.;
-    pressaosuperior_ = 0.;
-    concentracaosuperior_ = 0.;
-    concentracaoinferior_ = 0.;
+    tempsuperior_= .0;
+    tempinferior_ = .0;
+    nivelsuperior_ = .0;
+    nivelinferior_ = .0;
+    vazaosuperior_ = .0;
+    vazaoinferior_ = .0;
+    pressaosuperior_ = .0;
+    concentracaosuperior_ = .0;
+    concentracaoinferior_ = .0;
     cout << "---------------------------------------------" << endl;
     cout << "-----------Restricoes do Sistema-------------" << endl;
     bool repeticao_  = false;
@@ -46,7 +46,7 @@ tempsuperior_= 0.;
             }
         }catch(Excecao &e){
             e.Out();
-            cout << "-----Entre com um valor diferente de ZERO e da TEMPERATURA SUPERIOR-----" << endl;
+            cout << "-----Entre com um valor diferente de ZERO e menor que a TEMPERATURA SUPERIOR---" << endl;
         }
     }while(repeticao_ == false);
 
@@ -82,7 +82,7 @@ tempsuperior_= 0.;
             }
         }catch(Excecao &e){
             e.Out();
-            cout << "-----Entre com um valor diferente de ZERO e difentre do NIVEL SUPERIOR-----\n" << endl;
+            cout << "-----Entre com um valor diferente de ZERO e menor que o NIVEL SUPERIOR----\n" << endl;
         }
     }while(repeticao_ == false);
 
@@ -100,7 +100,7 @@ tempsuperior_= 0.;
             }
         }catch(Excecao &e){
                 e.Out();
-                cout << "-----Entre com um valor de VAZAO SUPERIOR diferente de ZERO-----\n" << endl;
+                cout << "-----Entre com um valor de VAZAO SUPERIOR diferente de ZERO----\n" << endl;
         }
     }while(repeticao_ == false);
 
@@ -118,7 +118,7 @@ tempsuperior_= 0.;
             }
         }catch(Excecao &e){
             e.Out();
-            cout << "-----Entre com um valor diferente de ZERO e difentre do VAZAO SUPERIOR-----\n" << endl;
+            cout << "-----Entre com um valor diferente de ZERO e e menor que a VAZAO SUPERIOR----\n" << endl;
         }
     }while(repeticao_ == false);
 
@@ -154,7 +154,7 @@ do{
         }
     }catch(Excecao &e){
         e.Out();
-        cout << "-----Entre com um valor diferente de ZERO e diferente da PRESSAO SUPERIOR-----\n" << endl;
+        cout << "-----Entre com um valor diferente de ZERO e e menor que a PRESSAO SUPERIOR----\n" << endl;
     }
 }while(repeticao_ == false);
 
@@ -190,7 +190,7 @@ do{
             }
         }catch(Excecao &e){
             e.Out();
-            cout << "-----Entre com um valor diferente de ZERO e diferente da CONCENTRACAO SUPERIOR-----\n" << endl;
+            cout << "--Entre com um valor diferente de ZERO e e menor que a CONCENTRACAO SUPERIOR--\n" << endl;
         }
     }while(repeticao_ == false);
 

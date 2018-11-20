@@ -37,7 +37,6 @@ void Openarquivo::Abrearquivo(){
         }catch(Excecao &e){
             e.Out();
             cout << "\nAbertura do arquivo " << nomearquivo_ << " Falhou!" << endl;
-            repeticao_ = false;
         }
     }while(repeticao_ == false);
 }
