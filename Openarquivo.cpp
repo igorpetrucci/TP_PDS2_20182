@@ -21,7 +21,7 @@ Openarquivo::Openarquivo(){
 }
 
 void Openarquivo::Abrearquivo(){
-    bool repeticao_ = true;
+    bool repeticao_ = false;
     do{
         try{
             cout << "---------------------------------------------" << endl;

@@ -2,15 +2,7 @@
 #include "Interface.h"
 
 int main(){
-    //Interface t;
-    Openarquivo teste_;
-    teste_.Abrearquivo();
-    teste_.Contagemlinhas();
-    //teste_.Mostraarquivo();
-    teste_.Definerestricoes();
-    teste_.Tratamento();
-    teste_.Fechaaquivo();
-
+    Interface t;
 
 ///Teste da CLASSE DATA
 //    Data A;
