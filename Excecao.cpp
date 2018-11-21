@@ -120,7 +120,7 @@ void Excecao::Inicia(){
                 }
             }catch(Excecao &e){
                 e.Out();
-                cout << "-----Entre com um valor diferente de ZERO e e menor que a VAZAO SUPERIOR----\n" << endl;
+                cout << "-----Entre com um valor diferente de ZERO e menor que a VAZAO SUPERIOR----\n" << endl;
             }
         }while(repeticao_ == false);
 
@@ -156,7 +156,7 @@ void Excecao::Inicia(){
             }
         }catch(Excecao &e){
             e.Out();
-            cout << "-----Entre com um valor diferente de ZERO e e menor que a PRESSAO SUPERIOR----\n" << endl;
+            cout << "-----Entre com um valor diferente de ZERO e menor que a PRESSAO SUPERIOR----\n" << endl;
         }
     }while(repeticao_ == false);
 

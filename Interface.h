@@ -6,6 +6,7 @@
 class Interface{
     public:
         Interface();
+        void Iniciaprograma();
         void Imprimeinterface();
         ~Interface();
 

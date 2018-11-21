@@ -7,7 +7,7 @@
 1542562037 c:\users\captain9\documents\pds2\teste\data.h
 	<string>
 
-1542812753 source:c:\users\captain9\documents\pds2\teste\excecao.cpp
+1542815177 source:c:\users\captain9\documents\pds2\teste\excecao.cpp
 	"Excecao.h"
 
 1542650312 c:\users\captain9\documents\pds2\teste\excecao.h
@@ -26,7 +26,7 @@
 	<iostream>
 	"Interface.h"
 
-1542303069 c:\users\captain9\documents\pds2\teste\interface.h
+1542816821 c:\users\captain9\documents\pds2\teste\interface.h
 	"Openarquivo.h"
 
 1542650133 c:\users\captain9\documents\pds2\teste\openarquivo.h
@@ -50,6 +50,7 @@
 1541618238 source:c:\users\captain9\documents\pds2\teste\sensor.cpp
 	"Sensor.h"
 
-1542650782 source:c:\users\captain9\documents\pds2\teste\interface.cpp
+1542817542 source:c:\users\captain9\documents\pds2\teste\interface.cpp
 	"Interface.h"
+	<cstdlib>
 
