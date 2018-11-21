@@ -41,13 +41,39 @@ void Interface::Iniciaprograma(){
             cout << "\n\n------ENCERRANDO O PROGRAMA------\n" << endl;
             exit(1);
         }
-    abre_.Abrearquivo();
-    Imprimeinterface();
-    abre_.Contagemlinhas();
-    abre_.Definerestricoes();
-    abre_.Tratamento();
-    abre_.Fechaaquivo();
 
+    //Loop para verificar se o usuário gostaria de realizar outra leitura de outro tanque de condensador
+        do{
+            resposta_ = 0;
+                    abre_.Abrearquivo();
+                    Imprimeinterface();
+                    abre_.Contagemlinhas();
+                    abre_.Definerestricoes();
+                    abre_.Tratamento();
+                    abre_.Fechaaquivo();
+                    cout << "-----------------------------------------" << endl;
+                    cout << "-----------------------------------------" << endl;
+                    cout << "-----------------------------------------" << endl;
+                    cout << "------------FIM DE LEITURA---------------" << endl;
+                    cout << "-----------------------------------------" << endl;
+                    cout << "-----------------------------------------" << endl;
+                    cout << "-----------------------------------------" << endl;
+                    cout << "---Deseja monitorar outro condensador?---" << endl;
+                    cout << "           1-SIM   2-NAO           \n" << "-> ";
+
+                    cin >> resposta_;
+                    while(resposta_ <= 0 || resposta_ >= 3){
+                        cout << "-----RESPOSTA INVALIDA!-----\n" << "-> ";
+                        cin >> resposta_;
+                        if(resposta_ > 0 && resposta_ < 3){
+                            break;
+                        }
+                    }
+                    if(resposta_ == 2){
+                        cout << "\n\n------ENCERRANDO O PROGRAMA------\n" << endl;
+                        exit(1);
+                    }
+        }while(repeticao_ == 1);
 }
 
 Interface::~Interface(){

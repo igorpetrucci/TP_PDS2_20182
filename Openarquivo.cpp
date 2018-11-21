@@ -295,11 +295,14 @@ void Openarquivo::Gravarestricoes(Excecao &restricoes_){
     concsup_        << restricoes_.Getconcentracaosuperior();
     concinf_        << restricoes_.Getconcentracaoinferior();
 
-    string texto_;
+    string nomearquivosaida_;
+    nomearquivosaida_ = "------------" + nomearquivo_ + "------------\n";
+    Gravalogs(nomearquivosaida_);
 
     string cabecalho_ = "------------RESTRICOES------------\n";
     Gravalogs(cabecalho_);
 
+    string texto_;
     texto_ = "Temperatura superior: " + tempsup_.str() + "\n" + "Temperatura inferior: " + tempinf_.str() + "\n" + "Nivel superior: " + nivelsup_.str() + "\n" + "Nivel inferior: " + nivelinf_.str() + "\n" + "Vazao superior: " + vazaosup_.str() + "\n" + "Vazao inferior: " + vazaoinf_.str() + "\n" + "Pressao superior: " + pressaosup_.str() + "\n" + "Pressao inferior: " + pressaoinf_.str() + "\n" + "Concentracao superior: " + concsup_.str() + "\n" + "Concentracao inferior: " + concinf_.str() + "\n";
 
     Hypnos_FILE.open("Logs_Sensores.txt", ios::app);
