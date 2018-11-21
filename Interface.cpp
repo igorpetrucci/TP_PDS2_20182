@@ -33,7 +33,7 @@ void Interface::Iniciaprograma(){
                 }
             }catch(Excecao &e){
                 e.Out();
-                cout << "--DIGITE 1 (SIM) OU 2 (NAO)--\n" << endl;
+                cout << "--DIGITE 1 (SIM) OU 2 (NAO)--\n-> ";
             }
         }while(repeticao_ == false);
 

@@ -28,6 +28,10 @@ void Openarquivo::Abrearquivo(){
             cout << "Digite o nome do arquivo a ser aberto: \n" << "-> ";
             cin >> nomearquivo_;
 
+            //Como o teclado é número há a necessidade de informar a extensão do arquivo ao final
+            //Pois o funcionario não terá como escrever .txt no final
+           nomearquivo_ = nomearquivo_ + ".txt";
+
             leitura.open(nomearquivo_.c_str());
             if (leitura.fail()){
                 throw Excecao("Erro de leitura de arquivo! \n");
