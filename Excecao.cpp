@@ -5,195 +5,221 @@ Excecao::Excecao(){
 }
 
 void Excecao::Inicia(){
-    tempsuperior_= .0;
-    tempinferior_ = .0;
-    nivelsuperior_ = .0;
-    nivelinferior_ = .0;
-    vazaosuperior_ = .0;
-    vazaoinferior_ = .0;
-    pressaosuperior_ = .0;
-    concentracaosuperior_ = .0;
-    concentracaoinferior_ = .0;
-    cout << "---------------------------------------------" << endl;
-    cout << "-----------Restricoes do Sistema-------------" << endl;
-    bool repeticao_  = false;
+    int dadoscorretos_ = 0;
     do{
-        try{
-            cout << "------Restricoes de Temperatura Maxima:------\n" << "->";
-            cin >> tempsuperior_;
-            if(tempsuperior_ <= .0){
-                throw Excecao("-----TEMPETURA SUPERIOR invalido!-----\n");
-            }else{
-                repeticao_ = true;
-            }
-        }catch(Excecao &e){
-            e.Out();
-            cout << "-----Entre com um valor maior que ZERO para Temperatura Maxima-----" << endl;
-        }
-    }while(repeticao_ == false);
-
-    //volta a variavel repeticção para o valor incial
-    repeticao_ = false;
-
-    do{
-        try{
-            cout << "------Restricoes de Temperatura Minima:------\n" << "->";
-            cin >> tempinferior_;
-            if(tempinferior_ <= .0 || tempinferior_ >= tempsuperior_){
-                throw Excecao("-----TEMPERATURA INFERIOR invalido!-----\n");
-            }else{
-                repeticao_ = true;
-            }
-        }catch(Excecao &e){
-            e.Out();
-            cout << "-----Entre com um valor diferente de ZERO e menor que a TEMPERATURA SUPERIOR---" << endl;
-        }
-    }while(repeticao_ == false);
-
-    //volta a variavel repeticção para o valor incial
-    repeticao_ = false;
-
-    do{
-        try{
-            cout << "------Restricoes de Nivel Maximo:------------\n" << "->";
-            cin >> nivelsuperior_;
-            if(nivelsuperior_ <= .0){
-                throw Excecao("-----NIVEL SUPERIOR invalido!-----\n");
-            }else{
-                repeticao_ = true;
-            }
-        }catch(Excecao &e){
-            e.Out();
-            cout << "-----Entre com um valor de NIVEL SUPERIOR diferente de ZERO-----" << endl;
-        }
-    }while(repeticao_ == false);
-
-    //volta a variavel repeticção para o valor incial
-    repeticao_ = false;
-
-    do{
-        try{
-            cout << "------Restricoes de Nivel Minimo:------\n" << "->";
-            cin >> nivelinferior_;
-            if (nivelinferior_ <= .0 || nivelinferior_ >= nivelsuperior_){
-                throw Excecao("-----NIVEL INFERIOR invalido!-----\n");
-            }else{
-                repeticao_ = true;
-            }
-        }catch(Excecao &e){
-            e.Out();
-            cout << "-----Entre com um valor diferente de ZERO e menor que o NIVEL SUPERIOR----\n" << endl;
-        }
-    }while(repeticao_ == false);
-
-    //volta a variavel repeticção para o valor incial
-    repeticao_ = false;
-
-    do{
-        try{
-            cout << "------Restricoes de Vazao Maxima:------\n" << "->";
-            cin >> vazaosuperior_;
-            if(vazaosuperior_ <= .0){
-                throw Excecao("-----VAZAO SUPERIOR invalido!-----\n");
-            }else{
-                repeticao_ = true;
-            }
-        }catch(Excecao &e){
+        tempsuperior_= .0;
+        tempinferior_ = .0;
+        nivelsuperior_ = .0;
+        nivelinferior_ = .0;
+        vazaosuperior_ = .0;
+        vazaoinferior_ = .0;
+        pressaosuperior_ = .0;
+        concentracaosuperior_ = .0;
+        concentracaoinferior_ = .0;
+        cout << "---------------------------------------------" << endl;
+        cout << "-----------Restricoes do Sistema-------------" << endl;
+        bool repeticao_  = false;
+        do{
+            try{
+                cout << "------Restricoes de Temperatura Maxima:------\n" << "->";
+                cin >> tempsuperior_;
+                if(tempsuperior_ <= .0){
+                    throw Excecao("-----TEMPETURA SUPERIOR invalido!-----\n");
+                }else{
+                    repeticao_ = true;
+                }
+            }catch(Excecao &e){
                 e.Out();
-                cout << "-----Entre com um valor de VAZAO SUPERIOR diferente de ZERO----\n" << endl;
-        }
-    }while(repeticao_ == false);
+                cout << "-----Entre com um valor maior que ZERO para Temperatura Maxima-----" << endl;
+            }
+        }while(repeticao_ == false);
 
-    //volta a variavel repeticção para o valor incial
-    repeticao_ = false;
+        //volta a variavel repeticção para o valor incial
+        repeticao_ = false;
+
+        do{
+            try{
+                cout << "------Restricoes de Temperatura Minima:------\n" << "->";
+                cin >> tempinferior_;
+                if(tempinferior_ <= .0 || tempinferior_ >= tempsuperior_){
+                    throw Excecao("-----TEMPERATURA INFERIOR invalido!-----\n");
+                }else{
+                    repeticao_ = true;
+                }
+            }catch(Excecao &e){
+                e.Out();
+                cout << "-----Entre com um valor diferente de ZERO e menor que a TEMPERATURA SUPERIOR---" << endl;
+            }
+        }while(repeticao_ == false);
+
+        //volta a variavel repeticção para o valor incial
+        repeticao_ = false;
+
+        do{
+            try{
+                cout << "------Restricoes de Nivel Maximo:------------\n" << "->";
+                cin >> nivelsuperior_;
+                if(nivelsuperior_ <= .0){
+                    throw Excecao("-----NIVEL SUPERIOR invalido!-----\n");
+                }else{
+                    repeticao_ = true;
+                }
+            }catch(Excecao &e){
+                e.Out();
+                cout << "-----Entre com um valor de NIVEL SUPERIOR diferente de ZERO-----" << endl;
+            }
+        }while(repeticao_ == false);
+
+        //volta a variavel repeticção para o valor incial
+        repeticao_ = false;
+
+        do{
+            try{
+                cout << "------Restricoes de Nivel Minimo:------\n" << "->";
+                cin >> nivelinferior_;
+                if (nivelinferior_ <= .0 || nivelinferior_ >= nivelsuperior_){
+                    throw Excecao("-----NIVEL INFERIOR invalido!-----\n");
+                }else{
+                    repeticao_ = true;
+                }
+            }catch(Excecao &e){
+                e.Out();
+                cout << "-----Entre com um valor diferente de ZERO e menor que o NIVEL SUPERIOR----\n" << endl;
+            }
+        }while(repeticao_ == false);
+
+        //volta a variavel repeticção para o valor incial
+        repeticao_ = false;
+
+        do{
+            try{
+                cout << "------Restricoes de Vazao Maxima:------\n" << "->";
+                cin >> vazaosuperior_;
+                if(vazaosuperior_ <= .0){
+                    throw Excecao("-----VAZAO SUPERIOR invalido!-----\n");
+                }else{
+                    repeticao_ = true;
+                }
+            }catch(Excecao &e){
+                    e.Out();
+                    cout << "-----Entre com um valor de VAZAO SUPERIOR diferente de ZERO----\n" << endl;
+            }
+        }while(repeticao_ == false);
+
+        //volta a variavel repeticção para o valor incial
+        repeticao_ = false;
+
+        do{
+            try{
+                cout << "------Restricoes de Vazao Minima:------\n" << "->";
+                cin >> vazaoinferior_;
+                if(vazaoinferior_ <= .0 || vazaoinferior_ >= vazaosuperior_){
+                    throw Excecao("-----VAZAO INFERIOR invalido!-----\n");
+                }else{
+                    repeticao_ = true;
+                }
+            }catch(Excecao &e){
+                e.Out();
+                cout << "-----Entre com um valor diferente de ZERO e e menor que a VAZAO SUPERIOR----\n" << endl;
+            }
+        }while(repeticao_ == false);
+
+        //volta a variavel repeticção para o valor incial
+        repeticao_ = false;
+
+       do{
+            try{
+                cout << "------Restricoes de Pressao Maxima:------\n" << "->";
+                cin >> pressaosuperior_;
+                if(pressaosuperior_ <= .0){
+                    throw Excecao("-----PRESSAO SUPERIOR invalido!-----\n");
+                }else{
+                    repeticao_ = true;
+                }
+            }catch(Excecao &e){
+                e.Out();
+                cout << "-----Entre com um valor de PRESSAO SUPERIOR diferente de ZERO-----\n" << endl;
+            }
+       }while(repeticao_ == false);
+
+        //volta a variavel repeticção para o valor incial
+        repeticao_ = false;
 
     do{
         try{
-            cout << "------Restricoes de Vazao Minima:------\n" << "->";
-            cin >> vazaoinferior_;
-            if(vazaoinferior_ <= .0 || vazaoinferior_ >= vazaosuperior_){
-                throw Excecao("-----VAZAO INFERIOR invalido!-----\n");
+            cout << "------Restricoes de Pressao Minima:------\n" << "->";
+            cin >> pressaoinferior_;
+            if (pressaoinferior_ <= .0 || pressaoinferior_ >= pressaosuperior_){
+                throw Excecao("-----PRESSAO INFERIOR invalido!-----\n");
             }else{
                 repeticao_ = true;
             }
         }catch(Excecao &e){
             e.Out();
-            cout << "-----Entre com um valor diferente de ZERO e e menor que a VAZAO SUPERIOR----\n" << endl;
+            cout << "-----Entre com um valor diferente de ZERO e e menor que a PRESSAO SUPERIOR----\n" << endl;
         }
     }while(repeticao_ == false);
 
-    //volta a variavel repeticção para o valor incial
-    repeticao_ = false;
-
-   do{
-        try{
-            cout << "------Restricoes de Pressao Maxima:------\n" << "->";
-            cin >> pressaosuperior_;
-            if(pressaosuperior_ <= .0){
-                throw Excecao("-----PRESSAO SUPERIOR invalido!-----\n");
-            }else{
-                repeticao_ = true;
-            }
-        }catch(Excecao &e){
-            e.Out();
-            cout << "-----Entre com um valor de PRESSAO SUPERIOR diferente de ZERO-----\n" << endl;
-        }
-   }while(repeticao_ == false);
-
-    //volta a variavel repeticção para o valor incial
-    repeticao_ = false;
-
-do{
-    try{
-        cout << "------Restricoes de Pressao Minima:------\n" << "->";
-        cin >> pressaoinferior_;
-        if (pressaoinferior_ <= .0 || pressaoinferior_ >= pressaosuperior_){
-            throw Excecao("-----PRESSAO INFERIOR invalido!-----\n");
-        }else{
-            repeticao_ = true;
-        }
-    }catch(Excecao &e){
-        e.Out();
-        cout << "-----Entre com um valor diferente de ZERO e e menor que a PRESSAO SUPERIOR----\n" << endl;
-    }
-}while(repeticao_ == false);
-
-    //volta a variavel repeticção para o valor incial
-    repeticao_ = false;
-
-do{
-    try{
-        cout << "------Restricoes de Concetracao Maxima:------\n" << "->";
-        cin >> concentracaosuperior_;
-        if(concentracaosuperior_ <= .0){
-            throw Excecao("-----CONCENTRACAO SUPERIOR invalido!-----\n");
-        }else{
-            repeticao_ = true;
-        }
-    }catch(Excecao &e){
-        e.Out();
-        cout << "-----Entre com um valor de CONCENTRACAO SUPERIOR diferente de ZERO-----\n" << endl;
-    }
-}while(repeticao_ == false);
-
-    //volta a variavel repeticção para o valor incial
-    repeticao_ = false;
+        //volta a variavel repeticção para o valor incial
+        repeticao_ = false;
 
     do{
         try{
-            cout << "------Restricoes de Concetracao Minima:------\n" << "->";
-            cin >> concentracaoinferior_;
-            if(concentracaoinferior_ <= .0 || concentracaoinferior_ >= concentracaosuperior_){
-                throw Excecao("-----CONCENTRACAO INFERIOR invalido!-----\n");
+            cout << "------Restricoes de Concetracao Maxima:------\n" << "->";
+            cin >> concentracaosuperior_;
+            if(concentracaosuperior_ <= .0){
+                throw Excecao("-----CONCENTRACAO SUPERIOR invalido!-----\n");
             }else{
                 repeticao_ = true;
             }
         }catch(Excecao &e){
             e.Out();
-            cout << "--Entre com um valor diferente de ZERO e e menor que a CONCENTRACAO SUPERIOR--\n" << endl;
+            cout << "-----Entre com um valor de CONCENTRACAO SUPERIOR diferente de ZERO-----\n" << endl;
         }
     }while(repeticao_ == false);
 
+        //volta a variavel repeticção para o valor incial
+        repeticao_ = false;
+
+        do{
+            try{
+                cout << "------Restricoes de Concetracao Minima:------\n" << "->";
+                cin >> concentracaoinferior_;
+                if(concentracaoinferior_ <= .0 || concentracaoinferior_ >= concentracaosuperior_){
+                    throw Excecao("-----CONCENTRACAO INFERIOR invalido!-----\n");
+                }else{
+                    repeticao_ = true;
+                }
+            }catch(Excecao &e){
+                e.Out();
+                cout << "--Entre com um valor diferente de ZERO e menor que a CONCENTRACAO SUPERIOR--\n" << endl;
+            }
+        }while(repeticao_ == false);
+
+
+        cout << "------OS DADOS INSERIDOS ESTAO CORRETOS?------" << "\n" << "-> 1 - SIM " << "-> 2 - NAO" << "\n" << "-> ";
+        //volta a variavel repeticção para o valor incial
+        repeticao_ = false;
+
+        do{
+            try{
+                cin >> dadoscorretos_;
+                if(dadoscorretos_ <= 0 || dadoscorretos_ >= 3){
+                    throw Excecao("-----RESPOSTA INVALIDA!-----\n");
+                }else{
+                    repeticao_ = true;
+                }
+            }catch(Excecao &e){
+                e.Out();
+                cout << "--DIGITE 1 (SIM) OU 2 (NAO)--\n" << endl;
+            }
+        }while(repeticao_ == false);
+
+        if(dadoscorretos_ == 2){
+            cout << "\n\n------REDEFINICAO DAS RESTRICOES------\n" << endl;
+        }
+
+    }while(dadoscorretos_ == 2);
     cout << "---------------------------------------------" << endl;
     cout << "\n ------Restricoes definidas com exito!------" << endl;
     cout << "---------------------------------------------" << endl;

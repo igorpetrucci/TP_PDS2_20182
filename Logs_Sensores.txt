@@ -82,3 +82,317 @@ Concentracao inferior: 50
 -ALERTA DE VAZAO MAX-------^^^^^^
 -------ALERTA DE PRESSAO MAX------------^^^^^^
 -------ALERTA DE CONCENTRACAO MIN----------------------^^^^^^
+------------RESTRICOES------------
+Temperatura superior: 10
+Temperatura inferior: 5
+Nivel superior: 10
+Nivel inferior: 5
+Vazao superior: 100
+Vazao inferior: 5
+Pressao superior: 10
+Pressao inferior: 5
+Concentracao superior: 100
+Concentracao inferior: 1
+---------------------------------------
+---------------LOGs--------------------
+----------------------------------------
+21/05/2018  18:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+21/05/2018  18:02:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+21/05/2018  18:04:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+21/05/2018    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+21/05/2018  18:11:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+21/05/2018  18:32:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+21/05/2018  18:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+21/05/2018  19:02:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+21/05/2018  19:04:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+22/05/2018  8:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+22/05/2018  8:22:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+22/05/2018  8:54:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+22/05/2018  8:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+23/05/2018  8:22:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+23/05/2018  8:54:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+23/05/2018  8:54:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+------------RESTRICOES------------
+Temperatura superior: 10
+Temperatura inferior: 3
+Nivel superior: 10
+Nivel inferior: 1
+Vazao superior: 10
+Vazao inferior: 1
+Pressao superior: 10
+Pressao inferior: 1
+Concentracao superior: 10
+Concentracao inferior: 1
+---------------------------------------
+---------------LOGs--------------------
+----------------------------------------
+21/05/2018  18:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  18:02:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  18:04:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  18:11:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  18:32:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  18:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  19:02:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  19:04:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+22/05/2018  8:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+22/05/2018  8:22:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+22/05/2018  8:54:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+22/05/2018  8:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+23/05/2018  8:22:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+23/05/2018  8:54:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+23/05/2018  8:54:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+------------RESTRICOES------------
+Temperatura superior: 10
+Temperatura inferior: 1
+Nivel superior: 2
+Nivel inferior: 1
+Vazao superior: 2
+Vazao inferior: 1
+Pressao superior: 2
+Pressao inferior: 1
+Concentracao superior: 2
+Concentracao inferior: 1
+---------------------------------------
+---------------LOGs--------------------
+----------------------------------------
+21/05/2018  18:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  18:02:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  18:04:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  18:11:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  18:32:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  18:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  19:02:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+21/05/2018  19:04:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+22/05/2018  8:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+22/05/2018  8:22:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+22/05/2018  8:54:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+22/05/2018  8:01:25    Temperatura: 35.3  Nivel: 33.1  Vazao: 450.8  Pressao: 41.3  Concentracao: 70
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+23/05/2018  8:22:34    Temperatura: 25.3  Nivel: 32.8  Vazao: 432.3  Pressao: 46.3  Concentracao: 90
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+23/05/2018  8:54:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
+23/05/2018  8:54:45    Temperatura: 23.3  Nivel: 35.1  Vazao: 442.9  Pressao: 43.3  Concentracao: 40
+^^^^^^-------ALERTA DE TEMPERATURA MAX-------
+-ALERTA DE NIVEL MAX-^^^^^^
+-ALERTA DE VAZAO MAX-------^^^^^^
+-------ALERTA DE PRESSAO MAX------------^^^^^^
+-------ALERTA DE CONCENTRACAO MAX----------------------^^^^^^
