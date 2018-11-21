@@ -1,5 +1,4 @@
 #include "Openarquivo.h"
-
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -17,8 +16,14 @@ using std::ofstream;
 using std::ifstream;
 
 Openarquivo::Openarquivo(){
+    // Inicializar a variável que armazenará a quantidade de linhas
+    // Do arquivo de entrada
     linhas_ = 0;
 }
+
+// Se a abertura de arquivo falhar pelo nome errado do arquivo
+// Fornecido pelo usuário o tratamento de exceção realiza
+// a tentativa de abertura novamente
 
 void Openarquivo::Abrearquivo(){
     bool repeticao_ = false;
@@ -28,8 +33,10 @@ void Openarquivo::Abrearquivo(){
             cout << "Digite o nome do arquivo a ser aberto: \n" << "-> ";
             cin >> nomearquivo_;
 
-            //Como o teclado é número há a necessidade de informar a extensão do arquivo ao final
-            //Pois o funcionario não terá como escrever .txt no final
+            // O teclado do condensador possui apenas números
+            // Desse modo o nome do arquivo digitado precisa ter
+            // A extensão explicita, neste caso, .txt, para assim,
+            // Poder ler o arquivo
            nomearquivo_ = nomearquivo_ + ".txt";
 
             leitura.open(nomearquivo_.c_str());
@@ -50,9 +57,8 @@ void Openarquivo::Fechaaquivo(){
     cout << "---->Fechamento do arquivo realizado com sucesso!" << endl;
 }
 
+// Verifica quantos linhas estão no arquivo de entrada
 void Openarquivo::Contagemlinhas(){
-    //Realiza a contagem de linhas para poder saber quantos itens serão avaliados
-    //Dentro do sistema
     ifstream contagem;
     string logs_;
 
@@ -62,10 +68,12 @@ void Openarquivo::Contagemlinhas(){
         getline(contagem, logs_);
         linhas_++;
     }
-    //cout << "Quantidade de linhas eh: " <<  linhas_ << "\n\n" << endl;
     contagem.close();
 }
 
+// Esta função faz a exibição de teste para verificar
+// Se os dados do arquivo de entrada estão sendo lidos
+// Corretamente
 void Openarquivo::Mostraarquivo(){
     //Função para visualização da tela para usuário
     string parte1_, parte2_, parte3_;
@@ -78,9 +86,10 @@ void Openarquivo::Mostraarquivo(){
     }
 }
 
-//Realiza a separação dos dados de cada linha e tratamento para alocação
-//de memória para cada item, bem como a analise de requisito se o sensor
-//irá identificar alguma alteração de temperatura
+// Realiza a separação dos dados de cada linha através dos espaços e trata
+// Os dados lidos para serem atribuidos a memória (DATA, HORA e VALORES).
+// Dentro da função analisa valores ocorre a verificação dos valores
+// do Limite Superior e Inferiror definido pelo usuário
 void Openarquivo::Tratamento(){
 
     string date_, hour_, value_;
@@ -93,21 +102,21 @@ void Openarquivo::Tratamento(){
         Separadata(date_);
         Separahorario(hour_);
         Separavalores(value_);
-        Analisavalores(); ///Verifica se os valores correspondem entre os limites superiores e inferiores
+        Analisavalores();
     }
 }
 
 void Openarquivo::Separadata(string data_){
    // cout << "\nImprimindo data: " << data_ << "\n" << endl;
     istringstream date(data_);
-	///Separando em parcelas menores a string da data
+	/// Separando em parcelas menores a string da data
 	string ano_, mes_, dia_;
 	getline(date, ano_, '/');
 	getline(date, mes_, '/');
 	getline(date, dia_, ' ');
 
 	int year_, month_, day_;
-	///convertendo as parcelas da string em int
+	/// converte as parcelas da string em int
 	istringstream ano(ano_);
 	ano >> year_;
 	istringstream mes(mes_) ;
@@ -116,14 +125,13 @@ void Openarquivo::Separadata(string data_){
 	dia >> day_;
 
 
-	///Definir na classe data os valores referentes ao ano, mes e dia
+	/// Definir na classe data aos valores referentes a ano, mes e dia
     atual_.SetAno(year_);
     atual_.SetMes(month_);
     atual_.SetDia(day_);
 }
 
 void Openarquivo::Separahorario(string data_){
-//    cout << "\n\nImprimido horario: " << data_ << endl;
 
     istringstream tempo(data_);
 
@@ -140,7 +148,7 @@ void Openarquivo::Separahorario(string data_){
 	minuto >> minute_;
 	segundo >> second_;
 
-	///Definir na classe Hora os valores referentes ao ano, mes e dia
+	/// Definir na classe Hora os valores referentes ao ano, mes e dia
 	horario_.SetHora(hour_);
 	horario_.SetMinuto(minute_);
 	horario_.SetSegundo(second_);
@@ -148,7 +156,7 @@ void Openarquivo::Separahorario(string data_){
 
 
 void Openarquivo::Separavalores(string data_){
-//    cout << "\nImprimindo valores: " << data_ << endl;
+
     istringstream sensor(data_);
 
 	string nivel_, vazao_, temperatura_, pressao_, concentracao_;
@@ -171,7 +179,7 @@ void Openarquivo::Separavalores(string data_){
     pressao >> dpressao_;
     concentracao >> dconcentracao_;
 
-   	///Definir na classe Dados os valores referentes ao ano, mes e dia
+   	/// Definir na classe Dados os valores referentes ao ano, mes e dia
     dados_.Setnivel(dnivel_);
     dados_.Setvazao(dvazao_);
     dados_.Settemperatura(dtemperatura_);
@@ -182,11 +190,20 @@ void Openarquivo::Separavalores(string data_){
 
 void Openarquivo::Analisavalores(){
 
-    //Exibe na tela os valores lidos do arquivo de entrada
+    // Exibe na tela os valores do sensor PRESSAO, TEMPERATURA, NIVEL, VAZAO, CONCENTRAÇÃO
+    // Lidos do arquivo de entrada
     Mostravalorestela();
 
-    //Grava os valores analisados no arquivo base
+    // Grava os valores no arquivo de saída do sensor PRESSAO, TEMPERATURA, NIVEL, VAZAO, CONCENTRAÇÃO
     Gravalogs();
+
+
+    // Realiza as comparações dos LIMITES SUPERIORES E LIMITES INFERIORES
+    // Com as variáveis fornecidas pelo arquivo de entrada do CONDENSADOR
+    // Como pode haver violação de vários sensores ao mesmo tempo
+    // Utilizamos o if em vez do tratamento de exceção, pois
+    // Ao verificar um erro o tratamento para a execução do programa e
+    // Não verifica o restante dos sensores
     if(dados_.Gettemperatura() > restricoes_.Gettempsuperior()){
         Excecao e("^^^^^^-------ALERTA DE TEMPERATURA MAX-------\n");
         Gravalogs(e.Geterro());
@@ -239,7 +256,9 @@ void Openarquivo::Analisavalores(){
     }
 }
 
-///Grava os logs lidos do sistema para o arquivo de saída
+// Realiza a gravação dos logs do sensor PRESSAO, TEMPERATURA, NIVEL, VAZAO, CONCENTRAÇÃO
+// E grava no inicio do arquivo de saída
+// Ocorre a conversão dos valores do tipo double para o tipo string e a sua identificação
 void Openarquivo::Gravalogs(){
     ofstream Hypnos_FILE;
 
@@ -265,6 +284,8 @@ void Openarquivo::Gravalogs(){
     Hypnos_FILE.close();
 }
 
+
+// Realiza a gravação de uma string especifica no arquivo de saída
 void Openarquivo::Gravalogs(string a_){
     ofstream Hypnos_FILE;
 
@@ -279,6 +300,9 @@ void Openarquivo::Gravalogs(string a_){
 
 }
 
+// Realiza a gravação das restrições definidas pelo usuário no arquivo de saída.
+// Ocorre a conversão das variáveis do tipo double para string
+// É realizado o primeiro processo de impressão do cabeçalho no arquivo e saída
 void Openarquivo::Gravarestricoes(Excecao &restricoes_){
     ofstream Hypnos_FILE;
 
@@ -307,7 +331,6 @@ void Openarquivo::Gravarestricoes(Excecao &restricoes_){
 
     Hypnos_FILE.open("Logs_Sensores.txt", ios::app);
     if(Hypnos_FILE.is_open()){
-        //cout << "Abertura do arquivo com Sucesso" << endl;
         Hypnos_FILE << texto_;
     }else{
         cout << "Erro ao abrir o arquivo de texto" << endl;
@@ -316,15 +339,20 @@ void Openarquivo::Gravarestricoes(Excecao &restricoes_){
     Hypnos_FILE.close();
 }
 
+// Exibe as informações no formato correto e identificado
+// DATA (formato PT-BR), HORA, VALORES dos sensores
 void Openarquivo::Mostravalorestela(){
     cout << atual_.Datastring() << horario_.Horastring() << endl;
     cout << "Temperatura:" << dados_.Gettemperatura() << " Nivel:" << dados_.Getnivel() << " Vazao:" << dados_.Getvazao() << " Pressao:" << dados_.Getpressao() << " Concentracao:" << dados_.Getconcentracao() << endl;
     cout << endl;
 }
 
+// Inicia o processo de instanciar as variáveis de LIMITE SUPERIOR E INFERIOR
+// De cada sensor de PRESSAO, TEMPERATURA, NIVEL, VAZAO, CONCENTRAÇÃO
+// Após a definição a função grava os valores no arquivo de saída e
+// O inicio do cabeçalho de LOGs
 void Openarquivo::Definerestricoes(){
 
-    //Realiza a gravação de das restrições nos atributos
     restricoes_.Inicia();
     Gravarestricoes(restricoes_);
 

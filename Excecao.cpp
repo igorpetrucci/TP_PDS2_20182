@@ -3,7 +3,7 @@
 Excecao::Excecao(){
 
 }
-
+// Definição dos LIMITES SUPERIORRES e LIMITES INFERIORES
 void Excecao::Inicia(){
     int dadoscorretos_ = 0;
     do{
@@ -34,7 +34,7 @@ void Excecao::Inicia(){
             }
         }while(repeticao_ == false);
 
-        //volta a variavel repeticção para o valor incial
+        //RESET DA VARIAVEL PARA APLICA-LA A OUTRO LIMITE
         repeticao_ = false;
 
         do{
@@ -52,7 +52,7 @@ void Excecao::Inicia(){
             }
         }while(repeticao_ == false);
 
-        //volta a variavel repeticção para o valor incial
+        //RESET DA VARIAVEL PARA APLICA-LA A OUTRO LIMITE
         repeticao_ = false;
 
         do{
@@ -70,7 +70,7 @@ void Excecao::Inicia(){
             }
         }while(repeticao_ == false);
 
-        //volta a variavel repeticção para o valor incial
+        //RESET DA VARIAVEL PARA APLICA-LA A OUTRO LIMITE
         repeticao_ = false;
 
         do{
@@ -88,7 +88,7 @@ void Excecao::Inicia(){
             }
         }while(repeticao_ == false);
 
-        //volta a variavel repeticção para o valor incial
+        //RESET DA VARIAVEL PARA APLICA-LA A OUTRO LIMITE
         repeticao_ = false;
 
         do{
@@ -106,7 +106,7 @@ void Excecao::Inicia(){
             }
         }while(repeticao_ == false);
 
-        //volta a variavel repeticção para o valor incial
+        //RESET DA VARIAVEL PARA APLICA-LA A OUTRO LIMITE
         repeticao_ = false;
 
         do{
@@ -124,7 +124,7 @@ void Excecao::Inicia(){
             }
         }while(repeticao_ == false);
 
-        //volta a variavel repeticção para o valor incial
+        //RESET DA VARIAVEL PARA APLICA-LA A OUTRO LIMITE
         repeticao_ = false;
 
        do{
@@ -142,7 +142,7 @@ void Excecao::Inicia(){
             }
        }while(repeticao_ == false);
 
-        //volta a variavel repeticção para o valor incial
+        //RESET DA VARIAVEL PARA APLICA-LA A OUTRO LIMITE
         repeticao_ = false;
 
     do{
@@ -160,7 +160,7 @@ void Excecao::Inicia(){
         }
     }while(repeticao_ == false);
 
-        //volta a variavel repeticção para o valor incial
+        //RESET DA VARIAVEL PARA APLICA-LA A OUTRO LIMITE
         repeticao_ = false;
 
     do{
@@ -178,7 +178,7 @@ void Excecao::Inicia(){
         }
     }while(repeticao_ == false);
 
-        //volta a variavel repeticção para o valor incial
+        //RESET DA VARIAVEL PARA APLICA-LA A OUTRO LIMITE
         repeticao_ = false;
 
         do{
@@ -198,7 +198,7 @@ void Excecao::Inicia(){
 
 
         cout << "------OS DADOS INSERIDOS ESTAO CORRETOS?------" << "\n" << "-> 1 - SIM " << "-> 2 - NAO" << "\n" << "-> ";
-        //volta a variavel repeticção para o valor incial
+        //RESET DA VARIAVEL PARA APLICA-LA A OUTRO LIMITE
         repeticao_ = false;
 
         do{
@@ -225,10 +225,12 @@ void Excecao::Inicia(){
     cout << "---------------------------------------------" << endl;
 }
 
+// Atribui a variável tipoerro_ a string com informação de erro
 Excecao::Excecao(const string &tp){
     tipoerro_ = tp;
 }
 
+// Exibe em tela o erro ocorrido
 void Excecao::Out(){
     cout << tipoerro_ << endl;
 }
@@ -276,7 +278,6 @@ void Excecao::Setvazaosuperior(double vazaosup_){
 void Excecao::Setvazaoinferior(double vazaoinf_){
     vazaoinferior_ = vazaoinf_;
 }
-
 
 double Excecao::Gettempsuperior(){
     return tempsuperior_;

@@ -53,6 +53,7 @@ int Hora::GetSegundo()const{
     return segundo;
 }
 
+// Realiza a conversão dos dados em int para string
 string Hora::Horastring(){
     string horario_;
     stringstream hora_, minuto_, segundo_;

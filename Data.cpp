@@ -16,9 +16,8 @@ Data::~Data(){
 
 }
 
-//Sobrecarga do Operador
-
-//Verifico se a minha data é maior que
+// Sobrecarga de operador para verificar
+// Se a data é MAIOR que
 bool Data::operator> (const Data &other1){ //Verifica se a Data Esquerda A>B é maior que a Data da direita
     if (total_de_dias() > other1.total_de_dias()){
         return true;
@@ -26,7 +25,9 @@ bool Data::operator> (const Data &other1){ //Verifica se a Data Esquerda A>B é m
         return false;
     }
 }
-//Verifico se a minha data é menor que
+
+// Sobrecarga de operador para verificar
+// Se a data é MENOR que
 bool Data::operator< (const Data &other1){ //Verifica se a Data Esquerda A<B é menor que a Data da direita
     if (total_de_dias() < other1.total_de_dias()){
         return true;
@@ -35,12 +36,14 @@ bool Data::operator< (const Data &other1){ //Verifica se a Data Esquerda A<B é m
     }
 }
 
-//Verifico se a minha data é igual
+// Sobrecarga de operador para verificar
+// Se a data é IGUAL a
 bool Data::operator==(const Data &other1){
     return (dia == other1.GetDia()) && (mes == other1.GetMes()) && (ano == other1.GetAno());
 }
 
-//Verifica quantas dias de diferença tem entre as datas
+// Sobrecarga de operador para verificar
+// Se a quantos dias de DIFERENÇA  tem duas tadas
 int Data::operator- (Data &other1){
     int Quantidade_de_dias = 0;
 
@@ -54,7 +57,7 @@ int Data::operator- (Data &other1){
 }
 
 
-//Construtor de cópia de data
+// CONSTRUTOR DE COPIA para data
 Data & Data::operator= (const Data &l){
     SetDia(l.GetDia());
     SetMes(l.GetMes());
@@ -63,8 +66,8 @@ Data & Data::operator= (const Data &l){
 }
 
 
-//Métodos complementares para a sobrecarga de operador
-//Utilizo essa função para encontrar a quantidade de dias entre as duas datas
+// Métodos complementares para a sobrecarga de operador
+// Função para encontrar a quantos dias há entre as duas datas
 int Data::total_de_dias()const{
 int total_dias = 0;
     const int dias_mes[ ] = {31, 28, 31, 30, 31, 30 , 31, 31 , 30, 31, 30, 31};
@@ -91,8 +94,6 @@ int total_dias = 0;
     return total_dias;
 }
 
-
-//Métodos SET
 void Data::SetDia(int d){
     dia = d;
 }
