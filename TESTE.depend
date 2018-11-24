@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1542583864 source:c:\users\captain9\documents\pds2\teste\data.cpp
+1542842567 source:c:\users\captain9\documents\pds2\teste\data.cpp
 	<iostream>
 	<sstream>
 	"Data.h"
@@ -7,14 +7,14 @@
 1542562037 c:\users\captain9\documents\pds2\teste\data.h
 	<string>
 
-1542815177 source:c:\users\captain9\documents\pds2\teste\excecao.cpp
+1542842895 source:c:\users\captain9\documents\pds2\teste\excecao.cpp
 	"Excecao.h"
 
 1542650312 c:\users\captain9\documents\pds2\teste\excecao.h
 	<iostream>
 	<string>
 
-1542255600 source:c:\users\captain9\documents\pds2\teste\hora.cpp
+1542842121 source:c:\users\captain9\documents\pds2\teste\hora.cpp
 	<iostream>
 	<sstream>
 	"Hora.h"
@@ -22,7 +22,7 @@
 1542563566 c:\users\captain9\documents\pds2\teste\hora.h
 	<string>
 
-1542682576 source:c:\users\captain9\documents\pds2\teste\main.cpp
+1542835009 source:c:\users\captain9\documents\pds2\teste\main.cpp
 	<iostream>
 	"Interface.h"
 
@@ -39,7 +39,7 @@
 
 1541618176 c:\users\captain9\documents\pds2\teste\sensor.h
 
-1542831599 source:c:\users\captain9\documents\pds2\teste\openarquivo.cpp
+1542841130 source:c:\users\captain9\documents\pds2\teste\openarquivo.cpp
 	"Openarquivo.h"
 	<iostream>
 	<string>
@@ -50,7 +50,7 @@
 1541618238 source:c:\users\captain9\documents\pds2\teste\sensor.cpp
 	"Sensor.h"
 
-1542833303 source:c:\users\captain9\documents\pds2\teste\interface.cpp
+1542837996 source:c:\users\captain9\documents\pds2\teste\interface.cpp
 	"Interface.h"
 	<cstdlib>
 
